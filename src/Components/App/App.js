@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Navbar from '../Navbar/Navbar.js';
+import Overlay from '../Overlay/Overlay.js';
+import Backdrop from '../../Images/index.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <main className="container">
+        <aside className="leftColumn">
+          <Navbar page="index" />
+        </aside>
+        <section className="centerColumn">
+          <h1>Hello, my name is Inigo Montoya</h1>
+          <p>You killed my father, prepare to die</p>
+        </section>
+        <aside className="rightColumn">
+        </aside>
+        <Overlay path={Backdrop} size="full"/>
+      </main>
     );
   }
 }
