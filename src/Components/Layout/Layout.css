@@ -1,0 +1,23 @@
+.container {
+  display         : grid;
+  grid-row        : 2 / 10;
+  grid-column     : 2 / 10;
+  border-radius   : 2vh;
+  background-color: #ffeacd;
+  z-index         : 1;
+}
+
+.leftColumn {
+  grid-column: 1 / 2;
+  z-index    : 2;
+}
+
+.centerColumn {
+  grid-column: 2 / 9;
+  z-index    : 2;
+}
+
+.rightColumn {
+  grid-column: 9 / 10;
+  z-index    : 2;
+}

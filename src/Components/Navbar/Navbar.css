@@ -1,16 +1,16 @@
 ul {
   list-style-type: none;
-  position: relative;
-  left: -1vw;
+  position       : relative;
+  left           : -1vw;
 }
 
 a:link {
-  color: #786346;
+  color          : #786346;
   text-decoration: none;
 }
 
 a:visited {
-  color: #786346;
+  color          : #786346;
   text-decoration: none;
 }
 
