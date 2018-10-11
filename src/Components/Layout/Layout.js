@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
-import Navbar from '../Navbar/Navbar.js';
-import Overlay from '../Overlay/Overlay.js';
-import Backdrop from '../../Images/index.svg';
-import './Layout.css';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Navbar from '../Navbar/Navbar.js'
+import Overlay from '../Overlay/Overlay.js'
+import './Layout.css'
 
 class Layout extends Component {
+	static propTypes = {
+		content   : PropTypes.element,
+		background: PropTypes.string
+	}
 	render() {
 		return (
 			<main className="container">
@@ -12,15 +16,14 @@ class Layout extends Component {
 					<Navbar page="index" />
 				</aside>
 				<section className="centerColumn">
-					<h1>Hello, my name is Inigo Montoya</h1>
-					<p>You killed my father, prepare to die</p>
+					{this.props.content}
 				</section>
 				<aside className="rightColumn">
 				</aside>
-				<Overlay path={Backdrop} size="full" />
+				<Overlay path={this.props.background} size="full" />
 			</main>
-		);
+		)
 	}
 }
 
-export default Layout;
+export default Layout
