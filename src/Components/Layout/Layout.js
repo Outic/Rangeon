@@ -1,26 +1,27 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import { Route, Switch } from 'react-router-dom'
+
+import Home from '../Pages/Home/Home.js'
+import DiceBox from '../Pages/DiceBox/DiceBox.js'
+import CharGen from '../Pages/CharGen/CharGen.js'
 import Navbar from '../Navbar/Navbar.js'
-import Overlay from '../Overlay/Overlay.js'
+
 import './Layout.css'
 
 class Layout extends Component {
-	static propTypes = {
-		content   : PropTypes.element,
-		background: PropTypes.string
-	}
 	render() {
 		return (
 			<main className="container">
 				<aside className="leftColumn">
-					<Navbar page="index" />
+					<Navbar />
 				</aside>
-				<section className="centerColumn">
-					{this.props.content}
+				<section className="mainColumn">
+					<Switch>
+						<Route exact path="/" component={Home}/>
+						<Route path="/DiceBox" component={DiceBox}/>
+						<Route path="/CharGen" component={CharGen}/>
+					</Switch>
 				</section>
-				<aside className="rightColumn">
-				</aside>
-				<Overlay path={this.props.background} size="full" />
 			</main>
 		)
 	}

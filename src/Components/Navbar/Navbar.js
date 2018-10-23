@@ -1,19 +1,22 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 
-function Navbar({page}) {
+function Navbar() {
 	return (
 		<ul>
-			<a href={(page === 'index') ? '#' : '../../../index.html'}><li>Index</li></a>
-			<a href={(page === 'diceBox') ? '#' : '../../../diceBox.html'}><li>DiceBox</li></a>
+			<li>
+				<Link to="/">Home</Link>
+			</li>
+			<li>
+				<Link to="/DiceBox">DiceBox</Link>
+			</li>
+			<li>
+				<Link to="/CharGen">CharGen</Link>
+			</li>
 		</ul>
 	)
-}
-
-Navbar.propTypes = {
-	page: PropTypes.string
 }
 
 export default Navbar

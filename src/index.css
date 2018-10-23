@@ -1,12 +1,19 @@
+:root {
+  --BG-lite: #78a9c4;
+  --BG-dark: #3e687f;
+  --FG-lite: #ffeacd;
+  --FG-dark: #786346;
+}
+
 html {
-  background: linear-gradient(to right, #3e687f, #78a9c4);
-  color: #786346;
-  font-size: 2vmin;
+  background : linear-gradient(to right, var(--BG-dark), var(--BG-lite));
+  color      : var(--FG-dark);
+  font-size  : 2vmin;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #root {
-  display: grid;
-  grid-template-columns: repeat(10, 10vw);
-  grid-template-rows: repeat(10, 9.5vh);
+  display              : grid;
+  grid-template-columns: [farleft] 1fr [leftborder] 80% [rightborder] 1fr [farright];
+  grid-auto-rows       : minmax(100px, auto);
 }
