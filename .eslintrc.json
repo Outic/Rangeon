@@ -33,7 +33,7 @@
             "never"
         ],
         "react/no-unescaped-entities": [
-            "disabled"
+            "off"
         ]
     }
 }

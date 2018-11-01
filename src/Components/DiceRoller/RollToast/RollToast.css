@@ -1,0 +1,36 @@
+.rollToast {
+  background-color: var(--FG-lite);
+  color: var(--FG-dark);
+}
+
+.toastHeader {
+  margin: -5px;
+  opacity: 0.3;  
+  transition: ease 0.3s;
+} .toastHeader:hover {
+  opacity: 1;
+}
+
+.toastBody {
+  margin: 8px;
+}
+
+.toastButton {
+  position: relative;
+  color: #000;
+  background: transparent;
+  font-size: 1em;
+  float: right;
+  outline: none;
+  border: none;
+  right: -24px;
+  opacity: 0.5;
+  transition: ease 0.3s
+} .toastButton:hover {
+  opacity: 1;
+}
+
+.logButton {
+  position: relative;
+
+}
